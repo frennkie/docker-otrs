@@ -21,6 +21,7 @@ RUN yum install -y http://ftp.otrs.org/pub/otrs/RPMS/rhel/6/otrs-${OTRS_VERSION}
 # Add run script
 COPY run.sh /
 COPY functions.sh /
+COPY GenericTicketConnectorREST.yml /
 RUN chmod 755 /*.sh
 #Add configuration file
 COPY Config.pm ${OTRS_ROOT}docker/defaults/Config.pm.default
